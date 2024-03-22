@@ -62,7 +62,6 @@ watchEffect(
 
 .pokemon-list-container {
   .pagination-container {
-    background: $background;
     position: sticky;
     top: rem(16);
     left: 0;

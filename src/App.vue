@@ -18,7 +18,7 @@ console.log(route.path === "/");
         <button @click="offset = Math.max(0, offset - offsetValue)" :disabled="!offset">
           Prev
         </button>
-        {{ offset / offsetValue }}
+        {{ Math.round(offset / offsetValue) }}
         <button
           @click="offset = Math.min(maxNumber, offset + offsetValue)"
           :disabled="offset >= maxNumber"
@@ -29,7 +29,9 @@ console.log(route.path === "/");
     </nav>
   </header>
 
-  <Suspense> <RouterView /></Suspense>
+  <Suspense>
+    <RouterView />
+  </Suspense>
 </template>
 
 <style scoped lang="scss">
